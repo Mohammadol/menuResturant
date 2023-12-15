@@ -1,13 +1,16 @@
 <template>
   <navBar></navBar>
   <router-view Type="Add"></router-view>
+  <SpeedInsights/>
 </template>
 <script>
   import navBar from './components/navBar.vue';
+  import {SpeedInsights} from "@vercel/speed-insights/vue"
 
 export default {
   components: {
-    navBar
+    navBar,
+    SpeedInsights
   }
 }
 </script>
