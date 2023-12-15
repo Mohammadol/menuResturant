@@ -3,8 +3,9 @@ import addFood from '../views/addFood.vue'
 import resturant from '../views/resturant.vue'
 
 const routes = [
-  { path: '/', name:addFood, component: addFood },
+  { path: '/', name:dashBoard, component: dashBoard },
   { path: '/resturant', name:resturant, component: resturant },
+  { path: '/food', name:addFood, component: addFood },
 ]
 
 const router = createRouter({

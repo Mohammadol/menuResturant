@@ -2,6 +2,7 @@
   <div class="topnav" id="myTopnav">
     <router-link to="/">Dashboard</router-link>
     <router-link to="/resturant">addResturant</router-link>
+    <router-link to="/food">addFood</router-link>
     <a href="javascript:void(0);" class="icon" @click="navTog()">
       <i>tog</i>
     </a>
