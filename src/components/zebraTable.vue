@@ -1,27 +1,19 @@
 <template>
+    <h2>{{ tableName }}</h2>
   <table>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Points</th>
+      <th v-for="tHead in tableHeaders" :key="tHead">{{ tHead }}</th>
     </tr>
-    <tr>
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-    </tr>
-    <tr>
-      <td>Adam</td>
-      <td>Johnson</td>
-      <td>67</td>
+    <tr v-for="tContent in tableContent" :key="tContent">
+      <td v-for="Content in tContent" :key="Content">{{ Content }}</td>
     </tr>
   </table>
 </template>
+<script>
+export default {
+  props: { tableHeaders: [], tableContent: {},tableName:"" },
+};
+</script>
 <style>
 table {
   border-collapse: collapse;
@@ -30,7 +22,8 @@ table {
   border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 16px;
 }

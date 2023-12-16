@@ -4,12 +4,8 @@
     <router-link to="/resturant">addResturant</router-link>
     <router-link to="/food">addFood</router-link>
     <a href="javascript:void(0);" class="icon" @click="navTog()">
-      <i>tog</i>
+      <i class="material-icons" style="font-size:15px">menu</i>
     </a>
-  </div>
-  <div style="padding-left: 16px">
-    <h2>Responsive Topnav Example</h2>
-    <p>Resize the browser window to see how it works.</p>
   </div>
 </template>
 <script>
