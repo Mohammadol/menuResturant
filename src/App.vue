@@ -1,22 +1,37 @@
 <template>
-  <navBar></navBar>
+  <navBar v-if="show"></navBar>
   <router-view Type="Add"></router-view>
-  <SpeedInsights/>
+  <SpeedInsights />
 </template>
 <script>
-  import navBar from './components/navBar.vue';
-  import {SpeedInsights} from "@vercel/speed-insights/vue"
+import navBar from "./components/navBar.vue";
+import { SpeedInsights } from "@vercel/speed-insights/vue";
 
 export default {
+  data() {
+    return {
+      show: true,
+    };
+  },
   components: {
     navBar,
-    SpeedInsights
-  }
-}
+    SpeedInsights,
+  },
+  watch: {
+    $route(to, from) {
+      if (to.fullPath === "/resturant/" + this.$route.params.id) {
+        this.show = false;
+        console.log(this.$route.params.id)
+      } else {
+        this.show = true;
+      }
+    },
+  },
+};
 </script>
 
 <style>
-body{
+body {
   margin: 0%;
 }
 #app {

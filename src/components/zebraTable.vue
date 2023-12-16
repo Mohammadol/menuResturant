@@ -1,17 +1,19 @@
 <template>
-    <h2>{{ tableName }}</h2>
-  <table>
-    <tr>
-      <th v-for="tHead in tableHeaders" :key="tHead">{{ tHead }}</th>
-    </tr>
-    <tr v-for="tContent in tableContent" :key="tContent">
-      <td v-for="Content in tContent" :key="Content">{{ Content }}</td>
-    </tr>
-  </table>
+  <h2>{{ tableName }}</h2>
+  <div style="overflow-x: auto">
+    <table>
+      <tr>
+        <th v-for="tHead in tableHeaders" :key="tHead">{{ tHead }}</th>
+      </tr>
+      <tr v-for="tContent in tableContent" :key="tContent">
+        <td v-for="Content in tContent" :key="Content">{{ Content }}</td>
+      </tr>
+    </table>
+  </div>
 </template>
 <script>
 export default {
-  props: { tableHeaders: [], tableContent: {},tableName:"" },
+  props: { tableHeaders: [], tableContent: {}, tableName: "" },
 };
 </script>
 <style>

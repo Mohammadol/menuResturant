@@ -3,6 +3,7 @@
     <router-link to="/">Dashboard</router-link>
     <router-link to="/resturant">addResturant</router-link>
     <router-link to="/food">addFood</router-link>
+    <router-link to="/resturant/:id">no bar</router-link>
     <a href="javascript:void(0);" class="icon" @click="navTog()">
       <i class="material-icons" style="font-size:15px">menu</i>
     </a>
