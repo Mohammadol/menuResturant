@@ -5,6 +5,7 @@
       :tableContent="resturantTableContent"
       :tableName="resturantTableName"
       :mainPath="mainPath"
+      :fullPath="fullPath"
     />
     <zebraTable
       :tableHeaders="foodTableHeaders"
@@ -27,7 +28,8 @@ export default {
       foodTableName: "food List",
       resturantTableHeaders: ["Id","Name", "Location", "PhoneNumber", "ExpiryDate","link","Qr_Code"],
       foodTableHeaders: ["Id","Name", "Ingrediants", "Resturant", "Class"],
-      mainPath :"https://menu-resturant.vercel.app/resturant",
+      mainPath :"/resturant/",
+      fullPath:"https://menu-resturant.vercel.app/",
       resturantTableContent: [
         {
           Id:"0",
