@@ -1,45 +1,128 @@
 <template>
+  <RnavBar></RnavBar>
   <div class="flexcontainer">
     <div class="card">
-      <img src="" alt="Avatar" style="width: 100%" />
+      <img src="../assets/fruits1.jpg" alt="Avatar" style="width: 100%" />
       <div class="container">
         <h4><b>John Doe</b></h4>
         <p>Architect & Engineer</p>
       </div>
     </div>
     <div class="card">
-      <img src="" alt="Avatar" style="width: 100%" />
+      <img src="../assets/امبراطور.webp" alt="Avatar" style="width: 100%" />
       <div class="container">
         <h4><b>John Doe</b></h4>
         <p>Architect & Engineer</p>
       </div>
     </div>
     <div class="card">
-      <img src="" alt="Avatar" style="width: 100%" />
+      <img src="../assets/كوكتيل.png" alt="Avatar" style="width: 100%" />
       <div class="container">
         <h4><b>John Doe</b></h4>
         <p>Architect & Engineer</p>
       </div>
     </div>
     <div class="card">
-      <img src="" alt="Avatar" style="width: 100%" />
+      <img src="../assets/ميلك شيك.jpeg" alt="Avatar" style="width: 100%" />
       <div class="container">
         <h4><b>John Doe</b></h4>
         <p>Architect & Engineer</p>
       </div>
     </div>
     <div class="card">
-      <img src="" alt="Avatar" style="width: 100%" />
+      <img src="../assets/fruits1.jpg" alt="Avatar" style="width: 100%" />
       <div class="container">
         <h4><b>John Doe</b></h4>
         <p>Architect & Engineer</p>
       </div>
     </div>
+    <div class="card">
+      <img src="../assets/امبراطور.webp" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/كوكتيل.png" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/ميلك شيك.jpeg" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div><div class="card">
+      <img src="../assets/fruits1.jpg" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/امبراطور.webp" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/كوكتيل.png" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/ميلك شيك.jpeg" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/fruits1.jpg" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/امبراطور.webp" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/كوكتيل.png" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../assets/ميلك شيك.jpeg" alt="Avatar" style="width: 100%" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    
   </div>
 </template>
 
 <script>
+import RnavBar from "../components/RnavBar.vue";
 export default {
+  
+  components:{
+    RnavBar,
+  },
   name: "resturant",
   props: {
     Type: "String",
@@ -56,8 +139,16 @@ export default {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  margin: 15px auto;
-  max-width:200px
+  padding:15px;
+  margin:15px;
+  max-width:200px;
+  border-style: solid;
+  border-color: #ffc501;
+  border-radius:0 0 0 25px;
+}
+img{
+  max-height: 200px;
+  object-fit: cover;
 }
 
 .card:hover {
@@ -69,8 +160,8 @@ export default {
 }
 .flexcontainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 </style>
