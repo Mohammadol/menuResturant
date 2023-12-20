@@ -1,5 +1,5 @@
 <template>
-  <RnavBar></RnavBar>
+  <RnavBar :ResturantName="ResturantName"></RnavBar>
   <div class="flexcontainer">
     <div class="card">
       <img src="../assets/fruits1.jpg" alt="Avatar" style="width: 100%" />
@@ -129,6 +129,7 @@ export default {
   },
   data() {
     return {
+      ResturantName:'Pastinoo Rica',
       rememberState: true,
     };
   },
@@ -145,6 +146,7 @@ export default {
   border-style: solid;
   border-color: #ffc501;
   border-radius:0 0 0 25px;
+  background-color:white;
 }
 img{
   max-height: 200px;

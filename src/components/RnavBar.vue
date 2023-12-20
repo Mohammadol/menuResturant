@@ -1,8 +1,8 @@
 <template>
   <div class="topnav" id="myTopnav">
-    <router-link to="/">Dashboard</router-link>
-    <router-link to="/add">Add</router-link>
-    <router-link to="/edit/:id">Edit</router-link>
+    <router-link :to="{x}">{{ResturantName}}</router-link>
+    <router-link to="/add">Gallary</router-link>
+    <router-link to="/edit/:id">About</router-link>
     <a href="javascript:void(0);" class="icon" @click="navTog()">
       <i class="material-icons" style="font-size:15px">menu</i>
     </a>
@@ -11,8 +11,13 @@
 <script>
 export default {
   name: "navBar",
+  props:{
+    ResturantName:""
+  },
   data() {
-    return {};
+    return {
+      x:this.$route.params.id
+    };
   },
   methods: {
     navTog() {
@@ -50,7 +55,7 @@ export default {
 }
 
 .topnav .router-link-exact-active {
-  background-color: #04aa6d;
+  background-color: #354f60;
   color: white;
 }
 
