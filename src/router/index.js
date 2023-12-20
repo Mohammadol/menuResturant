@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import addFood from '../views/addFood.vue'
+import addAny from '../views/addAny.vue'
 import resturant from '../views/resturant.vue'
 import dashBoard from '../views/dashBoard.vue'
 import NotFound from '../views/NotFound.vue'
 
 const routes = [
   { path: '/', name:dashBoard, component: dashBoard },
-  { path: '/resturant', name:resturant, component: resturant },
-  { path: '/food', name:addFood, component: addFood },
+  { path: '/resturant/:id/dashboard', name:addAny, component: addAny },
+  { path: '/add', name:addAny, component: addAny },
   { path: '/resturant/:id', name:resturant, component: resturant },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
