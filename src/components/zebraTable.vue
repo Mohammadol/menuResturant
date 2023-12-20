@@ -6,7 +6,7 @@
         <th v-for="tHead in tableHeaders" :key="tHead">{{ tHead }}</th>
       </tr>
       <tr v-for="tContent in tableContent" :key="tContent">
-        <td v-for="Content in tContent" :key="Content.Id" >{{ Content !== tContent.Link ? Content:"" }} <router-link :to="mainPath+tContent.Id" v-if="Content === tContent.Link">{{fullPath+tContent.Id}}</router-link></td>
+        <td v-for="Content in tContent" :key="Content.Id" >{{ Content !== tContent.Link ? Content:"" }} <router-link :to="mainPath+tContent.Id" v-if="Content === tContent.Link">{{fullPath+tContent.Id}}</router-link> <img v-if="Content === tContent.QR" :src="'https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl='+fullPath+tContent.Id"/> </td>
       </tr>
     </table>
   </div>

@@ -37,7 +37,8 @@ export default {
           Location: "Mazza.St",
           phoneNumber: "0153545489",
           ExpiryDate: "15/3/2024",
-          Link:''
+          Link:'/resturant/',
+          QR:'QR'
         },
         {
           Id:"1",
@@ -45,7 +46,8 @@ export default {
           Location: "Baghdad.St",
           phoneNumber: "0157168617",
           ExpiryDate: "28/5/2024",
-          Link:'/resturant/'
+          Link:'/resturant/',
+          QR:'QR'
         },
       ],
       foodTableContent: [

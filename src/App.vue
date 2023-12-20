@@ -43,4 +43,11 @@ body {
   padding: 0;
   margin: 1 auto;
 }
+img{
+  width: 50px;
+}
+img:hover{
+  width:150px;
+}
+
 </style>
