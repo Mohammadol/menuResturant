@@ -1,9 +1,8 @@
 <template>
   <div class="topnav" id="myTopnav">
     <router-link to="/">Dashboard</router-link>
-    <router-link to="/resturant">Add</router-link>
-    <router-link to="/add">Edit</router-link>
-    <router-link to="/resturant/:id">no bar</router-link>
+    <router-link to="/add">Add</router-link>
+    <router-link to="/edit/:id">Edit</router-link>
     <a href="javascript:void(0);" class="icon" @click="navTog()">
       <i class="material-icons" style="font-size:15px">menu</i>
     </a>
