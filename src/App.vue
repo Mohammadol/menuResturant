@@ -21,7 +21,7 @@ export default {
     $route(to, from) {
       if (to.fullPath === "/resturant/" + this.$route.params.id) {
         this.show = false;
-        console.log(this.$route.params.id)
+        console.log(this.$route.params.id);
       } else {
         this.show = true;
       }

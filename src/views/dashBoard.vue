@@ -1,42 +1,57 @@
 <template>
   <div class="container">
     <zebraTable
-      :tableHeaders="tableHeaders"
-      :tableContent="tableContent"
-      :tableName="tableName"
+      :tableHeaders="resturantTableHeaders"
+      :tableContent="resturantTableContent"
+      :tableName="resturantTableName"
+      :mainPath="mainPath"
     />
     <zebraTable
-      :tableHeaders="tableHeaders"
-      :tableContent="tableContent"
-      :tableName="tableName"
+      :tableHeaders="foodTableHeaders"
+      :tableContent="foodTableContent"
+      :tableName="foodTableName"
     />
   </div>
 </template>
 
 <script>
 import zebraTable from "@/components/zebraTable.vue";
+
 export default {
   components: {
-    zebraTable,
+    zebraTable
   },
   data() {
     return {
-      tableName: "Restutant List",
-      tableHeaders: ["id","Name", "Location", "PhoneNumber", "ExpiryDate"],
-      tableContent: [
+      resturantTableName: "Resturant List",
+      foodTableName: "food List",
+      resturantTableHeaders: ["Id","Name", "Location", "PhoneNumber", "ExpiryDate","link","Qr_Code"],
+      foodTableHeaders: ["Id","Name", "Ingrediants", "Resturant", "Class"],
+      mainPath :"https://menu-resturant.vercel.app/resturant",
+      resturantTableContent: [
         {
           Id:"0",
           Name: "subway",
           Location: "Mazza.St",
           phoneNumber: "0153545489",
           ExpiryDate: "15/3/2024",
+          Link:''
         },
         {
           Id:"1",
           Name: "Grandstack",
           Location: "Baghdad.St",
-          phoneNumber: "0153545489",
+          phoneNumber: "0157168617",
           ExpiryDate: "28/5/2024",
+          Link:'/resturant/'
+        },
+      ],
+      foodTableContent: [
+        {
+          "Id":"0","Name":"chickenPasta", "Ingrediants":"chicken, tomato souse, onion", "Resturant":"Grandstack" , "Class":"breakfast"
+        },
+        {
+          "Id":"1","Name":"mottonPasta", "Ingrediants":"motton, sweet souse, onion", "Resturant":"subway" , "Class":"breakfast"
         },
       ],
     };
@@ -45,4 +60,9 @@ export default {
 </script>
 
 <style>
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 </style>

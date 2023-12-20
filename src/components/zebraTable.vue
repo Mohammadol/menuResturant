@@ -1,19 +1,19 @@
 <template>
+  <div style="overflow-x: auto;padding: 10px">
   <h2>{{ tableName }}</h2>
-  <div style="overflow-x: auto">
     <table>
       <tr>
         <th v-for="tHead in tableHeaders" :key="tHead">{{ tHead }}</th>
       </tr>
       <tr v-for="tContent in tableContent" :key="tContent">
-        <td v-for="Content in tContent" :key="Content">{{ Content }}</td>
+        <td v-for="Content in tContent" :key="Content.Id" >{{ Content !== tContent.Link ? Content:"" }} <router-link :to="mainPath+tContent.Id" v-if="Content === tContent.Link">{{mainPath+tContent.Id}}</router-link></td>
       </tr>
     </table>
   </div>
 </template>
 <script>
 export default {
-  props: { tableHeaders: [], tableContent: {}, tableName: "" },
+  props: { tableHeaders: [], tableContent: {}, tableName: "", mainPath:"" },
 };
 </script>
 <style>
