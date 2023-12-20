@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .topnav {
   overflow: hidden;
   background-color: #bc0e4c;
@@ -81,6 +81,7 @@ export default {
     float: none;
     display: block;
     text-align: left;
+    border-bottom: 1px solid gray;
   }
 }
 </style>
