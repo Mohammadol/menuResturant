@@ -30,10 +30,12 @@ export default {
 <style scoped>
 .topnav {
   overflow: hidden;
-  background-color: #bc0e4c;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
   padding: 0%;
   margin: 0%;
   border-bottom: 3px solid #ffc501;
+  margin-bottom: 25px;
 }
 
 .topnav a {
@@ -55,8 +57,8 @@ export default {
 }
 
 .topnav .router-link-exact-active {
-  background-color: #354f60;
-  color: white;
+  background-color: rgba(0, 0, 0, 1);
+  color: #ffc501;
 }
 
 .topnav .icon {
